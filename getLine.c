@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * input_buf - buffers chained commands
- * @info: parameter struct
- * @buf: address of buffer
- * @len: address of len var
+ * input_buf - buffers chained commands.
+ * @info: parameter struct.
+ * @buf: address of buffer.
+ * @len: address of len var.
  *
  * Return: bytes read
  */
@@ -61,7 +61,7 @@ ssize_t get_input(info_t *info)
 	r = input_buf(info, &buf, &len);
 	if (r == -1) /* EOF */
 		return (-1);
-	if (len) /* we have commands left in the chain buffer */
+	if (len)	/* we have commands left in the chain buffer */
 	{
 		j = i; /* init new iterator to current buf position */
 		p = buf + i; /* get pointer for return */
